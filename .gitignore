@@ -1,0 +1,44 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+.DS_Store
+lambda.zip
+
+# Virtual environments
+.venv
+
+.mypy_cache
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+
+# State
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI config (credenciais)
+.terraformrc
+terraform.rc
+
+# Plan files
+*.tfplan
+
+# Variáveis sensíveis (se existirem)
+*.tfvars
+*.tfvars.json

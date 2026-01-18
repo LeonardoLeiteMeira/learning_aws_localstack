@@ -1,0 +1,24 @@
+services:
+  localstack:
+    container_name: "local-stack-test"
+    image: localstack/localstack:latest
+    ports:
+      - "4566:4566"
+      - "4510-4559:4510-4559"
+    environment:
+      - SERVICES=lambda,iam
+      - DEBUG=1
+      - AWS_DEFAULT_REGION=us-east-1
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+
+      # Necessário para o LocalStack conseguir criar/rodar containers internos quando ele executa Lambdas (modo Docker).
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    volumes:
+    # Monta o docker socket do host dentro do container do LocalStack.
+    # Isso permite que o LocalStack "mande o Docker" rodar coisas (ex: runtime da Lambda).
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - localstack_data:/var/lib/localstack
+
+volumes:
+  localstack_data:

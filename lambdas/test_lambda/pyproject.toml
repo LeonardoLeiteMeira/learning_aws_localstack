@@ -1,0 +1,14 @@
+[project]
+name = "test-lambda"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "boto3>=1.42.30",
+]
+
+[dependency-groups]
+dev = [
+    "boto3-stubs[essential]>=1.42.30",
+]

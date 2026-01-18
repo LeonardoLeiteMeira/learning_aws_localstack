@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "name": "terraform",
+      "path": "terraform/"
+    },
+    {
+      "name": "test_lambda",
+      "path": "lambdas/test_lambda"
+    },
+    {
+      "name":"second_lambda",
+      "path":"lambdas/second_lambda"
+    }
+  ],
+  "settings": {
+    "python.analysis.typeCheckingMode": "basic"
+  }
+}
