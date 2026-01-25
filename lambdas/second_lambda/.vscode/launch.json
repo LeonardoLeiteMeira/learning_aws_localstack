@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Lambda: second_lambda (event.json)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/invoke.py",
+      "args": [
+        "${workspaceFolder}/event.json"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}
