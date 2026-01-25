@@ -10,7 +10,11 @@
         "${workspaceFolder}/event.json"
       ],
       "cwd": "${workspaceFolder}",
-      "console": "integratedTerminal"
+      "console": "integratedTerminal",
+      "env": {
+        "DB_URL": "local_env",
+        "FEATURE_FLAG_X": "false"
+      }
     }
   ]
 }
